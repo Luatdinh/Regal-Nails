@@ -198,7 +198,7 @@ function Contact() {
               Charlotte, NC 28226
             </span>
           </p>
-          <a className="btn-primary full" href="tel:+1-000-000-0000">
+          <a className="btn-primary full"  href="tel:+19804028917">
             Call to Book
           </a>
         </div>
