@@ -21,7 +21,7 @@ function Header() {
         <a href="#pricing">Pricing</a>
         <a href="#hours">Hours</a>
         <a href="#contact">Contact</a>
-        <a className="btn-primary" href="tel:+1-000-000-0000">Book Now</a>
+        <a className="btn-primary" href="tel:+19804028917">Book Now</a>
       </nav>
     </header>
   );
@@ -36,7 +36,7 @@ function Hero() {
           Premium manicures, pedicures, and nail enhancements—crafted with care and top-quality products.
         </p>
         <div className="hero-cta">
-          <a className="btn-primary" href="tel:+1-000-000-0000">Call to Book</a>
+          <a className="btn-primary" href="tel:+19804028917">Call to Book</a>
           <a className="btn-outline" href="#pricing">View Prices</a>
         </div>
       </div>
