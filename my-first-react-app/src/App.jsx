@@ -1,7 +1,10 @@
+import { useState } from 'react';
 import './index.css';
 import './App.css';
 
 function Header() {
+  const [open, setOpen] = useState(false);
+
   return (
     <header className="site-header">
       <div className="brand">
@@ -11,16 +14,31 @@ function Header() {
         </div>
       </div>
 
-      <nav className="nav">
-        <a href="#services">Services</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#hours">Hours</a>
-        <a href="#contact">Contact</a>
-        <a className="btn-primary" href="tel:+19804028917">Book Now</a>
+      {/* Mobile hamburger */}
+      <button
+        className="menu-toggle"
+        aria-label="Toggle menu"
+        aria-expanded={open}
+        onClick={() => setOpen((v) => !v)}
+      >
+        <span className="menu-bar" />
+        <span className="menu-bar" />
+        <span className="menu-bar" />
+      </button>
+
+      <nav className={`nav ${open ? 'nav-open' : ''}`}>
+        <a href="#services" onClick={() => setOpen(false)}>Services</a>
+        <a href="#pricing" onClick={() => setOpen(false)}>Pricing</a>
+        <a href="#hours" onClick={() => setOpen(false)}>Hours</a>
+        <a href="#contact" onClick={() => setOpen(false)}>Contact</a>
+        <a className="btn-primary" href="tel:+19804028917" onClick={() => setOpen(false)}>
+          Book Now
+        </a>
       </nav>
     </header>
   );
 }
+
 
 function Hero() {
   return (

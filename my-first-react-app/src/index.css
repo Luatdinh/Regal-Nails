@@ -36,17 +36,45 @@ body {
   border-bottom: 1px solid var(--border);
   padding: 12px 20px;
   display: flex; align-items: center; justify-content: space-between;
+
+  /* responsive tweak */
+  gap: 12px;
+  flex-wrap: wrap;
 }
 .brand { display: flex; align-items: center; gap: 12px; }
 .brand-logo { width: 48px; height: 48px; object-fit: cover; border-radius: 10px; }
 .brand-name { margin: 0; font-size: 1.25rem; }
 .brand-tagline { margin: 0; color: var(--muted); font-size: 0.9rem; }
 
+/* nav (default desktop) */
 .nav { display: flex; align-items: center; gap: 16px; }
 .nav a {
   color: var(--text); text-decoration: none; font-weight: 600; opacity: 0.9;
 }
 .nav a:hover { opacity: 1; }
+
+/* hamburger toggle (mobile only) */
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 8px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.menu-toggle .menu-bar {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--text);
+  margin: 3px 0;
+  border-radius: 2px;
+}
+
+/* Buttons */
 .btn-primary {
   display: inline-block; padding: 10px 16px; border-radius: 10px;
   background: linear-gradient(135deg, var(--brand), var(--brand-2));
@@ -55,7 +83,7 @@ body {
 }
 .btn-outline {
   display: inline-block; padding: 10px 16px; border-radius: 10px;
-  border: 1px solid var(--border); color: var(--text); text-decoration: none; font-weight: 700;
+  border: 1px solid var(--text); color: var(--text); text-decoration: none; font-weight: 700;
   background: transparent;
 }
 .btn-primary.full { width: 100%; text-align: center; }
@@ -156,6 +184,33 @@ body {
   .price-grid .price-card { grid-column: span 4; }
 }
 
+/* ===== Mobile layout ===== */
+@media (max-width: 768px) {
+  .site-header { padding: 10px 14px; }
+
+  /* stack brand and show toggle */
+  .menu-toggle { display: inline-flex; }
+
+  /* make nav a slide-down panel */
+  .nav {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    width: 100%;
+
+    /* collapsed by default */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 220ms ease;
+  }
+
+  /* when open, reveal links */
+  .nav.nav-open { max-height: 320px; }
+
+  /* make CTA full width on phones */
+  .nav .btn-primary { text-align: center; width: 100%; }
+}
+
 /* Buttons (global override for your existing button styles) */
 button {
   background: linear-gradient(135deg, var(--brand), var(--brand-2));
@@ -164,3 +219,34 @@ button {
   font-weight: 800; cursor: pointer;
 }
 button:hover { filter: brightness(1.05); }
+
+/* === Color + CTA RESET (keep layout, restore old look) === */
+a, a:visited, .nav a, .nav a:visited { color: var(--text); }
+.btn-primary,
+.nav .btn-primary {
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+  color: #0b0e13 !important;
+  border: none;
+  box-shadow: 0 6px 20px rgba(156,107,255,0.25);
+}
+.btn-outline {
+  border: 1px solid var(--text);
+  color: var(--text);
+  background: transparent;
+}
+.btn-outline:hover {
+  background: rgba(255,255,255,0.06);
+  border-color: var(--text);
+}
+.nav a { opacity: 0.95; }
+.nav a:hover,
+.nav a:active { opacity: 1; }
+a, button { -webkit-tap-highlight-color: transparent; }
+.hero-cta .btn-primary { background: linear-gradient(135deg, var(--brand), var(--brand-2)); }
+.hero-cta .btn-outline { border-color: var(--text); color: var(--text); }
+
+/* Optional brighter text for phones */
+:root {
+  --text: #eef3fb;
+  --muted: #9db1c7;
+}
