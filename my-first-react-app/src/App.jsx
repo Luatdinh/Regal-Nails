@@ -185,18 +185,33 @@ function Contact() {
       <div className="contact-grid">
         <div className="card contact-card">
           <h3>Reach Us</h3>
-          <p><strong>Phone:</strong> <a href="tel:+1-000-000-0000">+1 (000) 000-0000</a></p>
-          <p><strong>Address:</strong> <span>123 Main St, Your City, CA</span></p>
-          <p><strong>Email:</strong> <a href="mailto:info@regalnails.com">info@regalnails.com</a></p>
-          <a className="btn-primary full" href="tel:+1-000-000-0000">Call to Book</a>
+          <p>
+            <strong>Phone:</strong>{" "}
+            <a href="tel:+1-000-000-0000">+1 (980) 402-8917</a>
+          </p>
+          <p>
+            <strong>Address:</strong>{" "}
+            <span>
+              Regal Nails, Salon &amp; Spa <br />
+              Inside Walmart – The Arboretum <br />
+              3209 Pineville-Matthews Rd <br />
+              Charlotte, NC 28226
+            </span>
+          </p>
+          <a className="btn-primary full" href="tel:+1-000-000-0000">
+            Call to Book
+          </a>
         </div>
+
         <div className="card map-card" role="region" aria-label="Map">
-          {/* Replace the src with your actual Google Maps embed link */}
           <iframe
             title="Regal Nails Location Map"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.837!2d-118.2437!3d34.0522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2zMzTCsDAzJz08LjAiTiAxMTjCsDE0JzM3LjMiVw!5e0!3m2!1sen!2sus!4v1710000000000"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3306.681761916668!2d-80.7825419!3d35.1073276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88569fda53e3c3a7%3A0x36a1960f78d66c36!2s3209%20Pineville-Matthews%20Rd%2C%20Charlotte%2C%20NC%2028226!5e0!3m2!1sen!2sus!4v1694811234567"
+            width="100%"
+            height="320"
+            style={{ border: 0, borderRadius: "10px" }}
             allowFullScreen
           />
         </div>
@@ -204,6 +219,7 @@ function Contact() {
     </section>
   );
 }
+
 
 function Footer() {
   return (
