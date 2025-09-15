@@ -1,1 +1,2 @@
 # nailSalon
+# RegalNails
