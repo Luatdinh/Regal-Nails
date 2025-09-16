@@ -347,3 +347,20 @@ a, a:visited, .nav a, .nav a:visited { color: #1f2a37; }
 @media (max-width: 768px) {
   .nav .btn-primary { width: 100%; text-align: center; }
 }
+
+/* === Mobile wallpaper fix (stop using fixed/cover on phones) === */
+@media (max-width: 768px) {
+  body::before {
+    background-attachment: scroll;     /* avoids iOS fixed bug */
+    background-size: 900px auto;       /* scale image sensibly for phones */
+    background-position: top center;   /* keep the floral bit visible */
+    background-repeat: repeat;         /* allow tiling as you scroll */
+  }
+}
+
+/* Extra safety for iOS Safari */
+@supports (-webkit-touch-callout: none) {
+  body::before {
+    background-attachment: scroll !important;
+  }
+}
