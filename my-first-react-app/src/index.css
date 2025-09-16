@@ -1,4 +1,3 @@
-/* Reset & base */
 * { box-sizing: border-box; }
 html, body, #root { height: 100%; }
 :root {
@@ -21,14 +20,12 @@ body {
   line-height: 1.6;
 }
 
-/* Utilities */
 .container { max-width: 1200px; padding: 0 20px; margin: 0 auto; }
 .section { padding: 64px 20px; }
 .section-title {
   text-align: center; font-size: 2rem; margin: 0 0 24px; letter-spacing: 0.5px;
 }
 
-/* Header */
 .site-header {
   position: sticky; top: 0; z-index: 40;
   backdrop-filter: blur(6px);
@@ -37,7 +34,6 @@ body {
   padding: 12px 20px;
   display: flex; align-items: center; justify-content: space-between;
 
-  /* responsive tweak */
   gap: 12px;
   flex-wrap: wrap;
 }
@@ -46,14 +42,12 @@ body {
 .brand-name { margin: 0; font-size: 1.25rem; }
 .brand-tagline { margin: 0; color: var(--muted); font-size: 0.9rem; }
 
-/* nav (default desktop) */
 .nav { display: flex; align-items: center; gap: 16px; }
 .nav a {
   color: var(--text); text-decoration: none; font-weight: 600; opacity: 0.9;
 }
 .nav a:hover { opacity: 1; }
 
-/* hamburger toggle (mobile only) */
 .menu-toggle {
   display: none;
   background: transparent;
@@ -74,7 +68,6 @@ body {
   border-radius: 2px;
 }
 
-/* Buttons */
 .btn-primary {
   display: inline-block; padding: 10px 16px; border-radius: 10px;
   background: linear-gradient(135deg, var(--brand), var(--brand-2));
@@ -88,7 +81,6 @@ body {
 }
 .btn-primary.full { width: 100%; text-align: center; }
 
-/* Hero */
 .hero {
   background:
     radial-gradient(800px 400px at 100% 0%, rgba(156,107,255,0.15), transparent 60%),
@@ -102,7 +94,6 @@ body {
 .hero p { color: var(--muted); margin: 0 auto 20px; max-width: 700px; }
 .hero-cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 
-/* Cards & Grid */
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -119,7 +110,6 @@ body {
   box-shadow: 0 10px 30px rgba(0,0,0,0.25);
 }
 
-/* Services */
 .service-card { grid-column: span 12; text-align: left; }
 .service-card h3 { margin: 8px 0 6px; }
 .service-card p { margin: 0; color: var(--muted); }
@@ -132,7 +122,6 @@ body {
   margin-bottom: 8px;
 }
 
-/* Pricing */
 .price-grid .price-card { grid-column: span 12; }
 .price-title { margin: 0 0 8px; font-size: 1.1rem; }
 .price-list { list-style: none; padding: 0; margin: 0; }
@@ -148,7 +137,6 @@ body {
 .dots { display: none; color: #2a3648; }
 .price-note, .disclaimer { color: var(--muted); margin-top: 10px; font-size: 0.95rem; }
 
-/* Hours */
 .hours-card { max-width: 520px; margin: 0 auto; }
 .hours-list { list-style: none; padding: 0; margin: 0; }
 .hours-list li {
@@ -157,7 +145,6 @@ body {
 }
 .hours-list li:last-child { border-bottom: 0; }
 
-/* Contact */
 .contact-grid {
   display: grid; gap: 16px;
   grid-template-columns: 1fr; max-width: 1200px; margin: 0 auto; padding: 0 20px;
@@ -167,13 +154,11 @@ body {
   width: 100%; height: 320px; border: 0; border-radius: 10px;
 }
 
-/* Footer */
 .site-footer {
   padding: 32px 20px; text-align: center; color: var(--muted);
   border-top: 1px solid var(--border);
 }
 
-/* Responsive */
 @media (min-width: 640px) {
   .service-card { grid-column: span 6; }
   .price-grid .price-card { grid-column: span 6; }
@@ -184,34 +169,27 @@ body {
   .price-grid .price-card { grid-column: span 4; }
 }
 
-/* ===== Mobile layout ===== */
 @media (max-width: 768px) {
   .site-header { padding: 10px 14px; }
 
-  /* stack brand and show toggle */
   .menu-toggle { display: inline-flex; }
 
-  /* make nav a slide-down panel */
   .nav {
     flex-direction: column;
     align-items: stretch;
     gap: 12px;
     width: 100%;
 
-    /* collapsed by default */
     max-height: 0;
     overflow: hidden;
     transition: max-height 220ms ease;
   }
 
-  /* when open, reveal links */
   .nav.nav-open { max-height: 320px; }
 
-  /* make CTA full width on phones */
   .nav .btn-primary { text-align: center; width: 100%; }
 }
 
-/* Buttons (global override for your existing button styles) */
 button {
   background: linear-gradient(135deg, var(--brand), var(--brand-2));
   color: #0b0e13;
@@ -220,7 +198,6 @@ button {
 }
 button:hover { filter: brightness(1.05); }
 
-/* === Color + CTA RESET (keep layout, restore old look) === */
 a, a:visited, .nav a, .nav a:visited { color: var(--text); }
 .btn-primary,
 .nav .btn-primary {
@@ -245,30 +222,26 @@ a, button { -webkit-tap-highlight-color: transparent; }
 .hero-cta .btn-primary { background: linear-gradient(135deg, var(--brand), var(--brand-2)); }
 .hero-cta .btn-outline { border-color: var(--text); color: var(--text); }
 
-/* Optional brighter text for phones */
 :root {
   --text: #eef3fb;
   --muted: #9db1c7;
 }
 
-/* ===== Regal Nails — Light Floral Theme (overrides) ===== */
 
-/* Softer, brighter palette */
 :root {
-  --bg: #fff7fb;            /* page backdrop */
+  --bg: #fff7fb;           
   --card: rgba(255,255,255,0.92);
-  --text: #1f2a37;          /* main text (dark slate) */
-  --muted: #5b6b7a;         /* secondary text */
-  --brand: #f472b6;         /* pink */
-  --brand-2: #34d399;       /* mint */
-  --border: #e5e7eb;        /* light border */
-  --accent: #94c973;        /* viney green accent */
+  --text: #1f2a37;         
+  --muted: #5b6b7a;        
+  --brand: #f472b6;         
+  --brand-2: #34d399;      
+  --border: #e5e7eb;       
+  --accent: #94c973;        
 }
 
-/* Bright floral wallpaper with vines — inline SVG pattern + soft overlay */
 body {
   color: var(--text);
-  background: none; /* clear the dark gradient we had */
+  background: none; 
   position: relative;
   overflow-x: hidden;
 }
@@ -279,8 +252,7 @@ body::before {
   inset: 0;
   z-index: -1;
 
-  /* Layer 1: soft white veil for readability
-     Layer 2: real floral background */
+  
   background:
     linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
     url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=60");
@@ -291,7 +263,6 @@ body::before {
 }
 
 
-/* Cards & sections on light wallpaper */
 .card {
   background: var(--card);
   border: 1px solid var(--border);
@@ -299,14 +270,12 @@ body::before {
   backdrop-filter: blur(2px);
 }
 
-/* Header floats nicely on light bg */
 .site-header {
   background: rgba(255,255,255,0.78);
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(8px);
 }
 
-/* Hero tweaks: lighten copy color and keep subtle glow */
 .hero {
   background:
     radial-gradient(800px 400px at 100% 0%, rgba(244,114,182,0.16), transparent 60%),
@@ -315,7 +284,6 @@ body::before {
 }
 .hero p { color: var(--muted); }
 
-/* Buttons keep your gradient vibe on light theme */
 .btn-primary,
 .nav .btn-primary,
 .hero-cta .btn-primary {
@@ -332,33 +300,30 @@ body::before {
 }
 .btn-outline:hover { background: rgba(31,42,55,0.05); }
 
-/* Links stay readable over light bg */
 a, a:visited, .nav a, .nav a:visited { color: #1f2a37; }
 .nav a:hover { opacity: 1; }
 
-/* Footer on light theme */
 .site-footer {
   color: #475569;
   border-top: 1px solid var(--border);
   background: rgba(255,255,255,0.65);
 }
 
-/* Mobile header remains the same behavior */
 @media (max-width: 768px) {
   .nav .btn-primary { width: 100%; text-align: center; }
 }
 
-/* === Mobile wallpaper fix (stop using fixed/cover on phones) === */
+
 @media (max-width: 768px) {
   body::before {
-    background-attachment: scroll;     /* avoids iOS fixed bug */
-    background-size: 900px auto;       /* scale image sensibly for phones */
-    background-position: top center;   /* keep the floral bit visible */
-    background-repeat: repeat;         /* allow tiling as you scroll */
+    background-attachment: scroll;    
+    background-size: 900px auto;       
+    background-position: top center;   
+    background-repeat: repeat;        
   }
 }
 
-/* Extra safety for iOS Safari */
+
 @supports (-webkit-touch-callout: none) {
   body::before {
     background-attachment: scroll !important;

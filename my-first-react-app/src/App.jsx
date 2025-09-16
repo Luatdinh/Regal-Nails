@@ -14,7 +14,6 @@ function Header() {
         </div>
       </div>
 
-      {/* Mobile hamburger */}
       <button
         className="menu-toggle"
         aria-label="Toggle menu"
