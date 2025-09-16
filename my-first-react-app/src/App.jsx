@@ -237,7 +237,7 @@ function Contact() {
 function Footer() {
   return (
     <footer className="site-footer">
-      <p>© {new Date().getFullYear()} This location is an independently owned and operated franchise
+      <p> This location is an independently owned and operated franchise
 For further information, comments, compliments, or suggestions please call: 1.866.279.8190 or email: comments@regalnails.com.</p>
     </footer>
   );
