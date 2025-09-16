@@ -69,13 +69,13 @@ function ServiceCard({ title, desc, icon }) {
 
 function Services() {
   const items = [
-    { title: 'Pedicure', desc: 'Classic, Regal, and Deluxe options to pamper your feet.', icon: '🦶' },
+    { title: 'Pedicure', desc: 'Classic, Regal, and Deluxe options to pamper your feet.' },
     { title: 'Manicure', desc: 'Basic and gel finishes for a polished look.', icon: '💅' },
     { title: 'Dip (SNS)', desc: 'Long-lasting color with optional tips & length.', icon: '✨' },
     { title: 'Gel X', desc: 'Lightweight extensions with a natural feel.', icon: '🌟' },
     { title: 'Acrylic', desc: 'Full set, refills, and shaping—your style, your way.', icon: '💎' },
-    { title: 'Polish Change', desc: 'Hands or toes—regular & gel options.', icon: '🎨' },
-    { title: 'Other Services', desc: 'Soaks, removals, paraffin, French, chrome, ombré, cat-eye.', icon: '🧴' },
+    { title: 'Polish Change', desc: 'Hands or toes—regular & gel options.' },
+    { title: 'Other Services', desc: 'Soaks, removals, paraffin, French, chrome, ombré, cat-eye.' },
     { title: 'Kids (Under 10)', desc: 'Gentle services for little ones.', icon: '🧒' },
   ];
   return (
@@ -111,10 +111,13 @@ function Pricing() {
     { label: 'Classic Pedicure', price: '$40' },
     { label: 'Regal Pedicure', price: '$50' },
     { label: 'Deluxe Pedicure', price: '$60' },
+    { label: 'Additional Gel Polish', price: '$15' },
   ];
   const manicure = [
     { label: 'Basic Manicure', price: '$25' },
+    { label: 'Deluxe Manicure', price: '$35' },
     { label: 'Gel Manicure', price: '$40' },
+
   ];
   const dip = [
     { label: 'Dip New Set', price: '$50' },
@@ -131,8 +134,7 @@ function Pricing() {
     { label: 'Full Set', price: '$60' },
     { label: 'Refill', price: '$50' },
     { label: 'Cut Down', price: '$5' },
-    { label: 'Builder Gel', price: 'Free' },
-    { label: 'Top Gel', price: 'Free' },
+    { label: 'Builder Gel', price: '$65' },
   ];
   const polish = [
     { label: 'Hands (Regular)', price: '$15' },
