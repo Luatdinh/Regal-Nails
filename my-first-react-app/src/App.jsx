@@ -60,12 +60,17 @@ function Hero() {
 function ServiceCard({ title, desc, icon }) {
   return (
     <div className="card service-card">
-      <div className="service-icon" aria-hidden>{icon}</div>
+      {icon && (
+        <div className="service-icon" aria-hidden>
+          {icon}
+        </div>
+      )}
       <h3>{title}</h3>
       <p>{desc}</p>
     </div>
   );
 }
+
 
 function Services() {
   const items = [
