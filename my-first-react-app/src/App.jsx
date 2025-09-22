@@ -135,8 +135,9 @@ function Pricing() {
     { label: 'Add Manicure', price: '+$10' },
   ];
   const acrylic = [
-    { label: 'Full Set', price: '$60' },
-    { label: 'Refill', price: '$50' },
+    { label: 'Full Set', price: '$45' },
+    { label: 'Refill', price: '$35' },
+    { label: 'Additional Gel Polish', price: '$15' },
     { label: 'Cut Down', price: '$5' },
     { label: 'Builder Gel', price: '$65' },
   ];
@@ -161,6 +162,13 @@ function Pricing() {
     { label: 'Polish (Hands)', price: '$12' },
     { label: 'Polish (Toes)', price: '$15' },
     { label: 'Gel Polish (Hands/Toes)', price: '$25' },
+  ];
+
+  const waxing = [
+    { label: 'Eyebrow', price: '$20' },
+    { label: 'lip', price: '$8' },
+    { label: 'chin', price: '$15' },
+    { label: 'underarms', price: '$20' },
   ];
 
   return (
