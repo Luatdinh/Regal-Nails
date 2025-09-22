@@ -166,9 +166,9 @@ function Pricing() {
 
   const waxing = [
     { label: 'Eyebrow', price: '$12' },
-    { label: 'lip', price: '$8' },
-    { label: 'chin', price: '$15' },
-    { label: 'underarms', price: '$20' },
+    { label: 'Lip', price: '$8' },
+    { label: 'Chin', price: '$15' },
+    { label: 'Underarms', price: '$20' },
   ];
 
   return (
