@@ -165,7 +165,7 @@ function Pricing() {
   ];
 
   const waxing = [
-    { label: 'Eyebrow', price: '$20' },
+    { label: 'Eyebrow', price: '$12' },
     { label: 'lip', price: '$8' },
     { label: 'chin', price: '$15' },
     { label: 'underarms', price: '$20' },
@@ -183,7 +183,7 @@ function Pricing() {
         <PriceTable title="Polish Change" rows={polish} />
         <PriceTable title="Other Services" rows={other} />
         <PriceTable title="Kids (Under 10)" rows={kids} />
-        <PriceTable title="Waxing Services" rows={kids} />
+        <PriceTable title="Waxing Services" rows={waxing} />
       </div>
       <p className="disclaimer">
         Prices subject to change. Please call for current promos and availability.
