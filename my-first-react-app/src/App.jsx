@@ -75,7 +75,7 @@ function DealDetail({title, serviceDeal}) {
 function Deal(){
   return(
     <section className="deal-card">
-      <DealDetail title="GRAND OPENING SPECIAL !" serviceDeal="20% OFF ALL SERVICE"/>
+      <DealDetail title="GRAND OPENING SPECIAL !" serviceDeal="20% OFF ALL SERVICES"/>
     </section>
   );
 }
