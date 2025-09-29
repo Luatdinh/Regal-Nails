@@ -92,7 +92,30 @@ body {
 }
 .hero h2 { font-size: clamp(2rem, 5vw, 3rem); margin: 0 0 10px; }
 .hero p { color: var(--muted); margin: 0 auto 20px; max-width: 700px; }
-.hero-cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+/* Make hero-cta items align nicely */
+.hero-cta {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center; /* centers everything vertically */
+  flex-wrap: wrap;
+}
+
+/* Style the "OR" text so it aligns properly */
+.hero-cta .or-text {
+  font-weight: 600;
+  color: var(--muted);
+  display: flex;
+  align-items: center;  /* ensures it centers vertically */
+  padding: 0 6px;
+}
+
+/* Add space between booking row and View Prices */
+.view {
+  display: block;
+  margin-bottom: 20px; /* pushes "View Prices" down */
+}
 
 .grid {
   display: grid;
@@ -308,6 +331,55 @@ a, a:visited, .nav a, .nav a:visited { color: #1f2a37; }
   border-top: 1px solid var(--border);
   background: rgba(255,255,255,0.65);
 }
+
+/* --- Deal Highlight --- */
+.deal-card {
+  background:
+    radial-gradient(800px 400px at 100% 0%, rgba(156,107,255,0.15), transparent 60%),
+    radial-gradient(600px 300px at 0% 100%, rgba(99,230,190,0.12), transparent 60%);
+  padding: 2em;
+  border-radius: 12px;
+  border: 2px dashed #ec407a; /* soft accent border */
+  text-align: center;
+  box-shadow: 0 0 10px rgba(236, 64, 122, 0.15);
+  margin: 2em auto;
+  max-width: 600px;
+}
+
+.deal-card h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5em;
+  font-family: 'Georgia', serif;
+  color: #d81b60; /* bold accent pink */
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-shadow: 1px 1px 2px rgba(216, 27, 96, 0.2);
+}
+
+.deal-card div {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #4a148c; /* deep purple for contrast */
+}
+
+
+
+.deal-card div span.discount {
+  color: #d81b60; /* highlight discount */
+  font-size: 1.6rem;
+  background: linear-gradient(90deg, #f8bbd0, #fce4ec);
+  padding: 0.2em 0.5em;
+  border-radius: 6px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  animation: glow 2s infinite;
+}
+
+@keyframes glow {
+  0%   { box-shadow: 0 0 5px rgba(216, 27, 96, 0.2); }
+  50%  { box-shadow: 0 0 12px rgba(216, 27, 96, 0.4); }
+  100% { box-shadow: 0 0 5px rgba(216, 27, 96, 0.2); }
+}
+
 
 @media (max-width: 768px) {
   .nav .btn-primary { width: 100%; text-align: center; }
