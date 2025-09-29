@@ -30,7 +30,7 @@ function Header() {
         <a href="#pricing" onClick={() => setOpen(false)}>Pricing</a>
         <a href="#hours" onClick={() => setOpen(false)}>Hours</a>
         <a href="#contact" onClick={() => setOpen(false)}>Contact</a>
-        <a className="btn-primary" href="tel:+19804028917" onClick={() => setOpen(false)}>
+        <a className="btn-primary" href="https://app.squareup.com/appointments/book/tpefm4gaufbtko/LVF9PQ3M9Q4MS/start" onClick={() => setOpen(false)}>
           Book Now
         </a>
       </nav>
@@ -47,14 +47,39 @@ function Hero() {
         <p>
           Premium manicures, pedicures, and nail enhancements—crafted with care and top-quality products.
         </p>
+        <span className='view'>
+        <a className="btn-outline" href="#pricing">View Prices</a>
+        </span>
         <div className="hero-cta">
           <a className="btn-primary" href="tel:+19804028917">Call to Book</a>
-          <a className="btn-outline" href="#pricing">View Prices</a>
+          <span className='or-text'> or </span>
+          <a className="btn-primary" href="https://app.squareup.com/appointments/book/tpefm4gaufbtko/LVF9PQ3M9Q4MS/start">Book Now</a>
         </div>
       </div>
     </section>
   );
 }
+
+function DealDetail({title, serviceDeal}) {
+  return (
+    <section className="section">
+      <h1 className="section-title">{title}</h1>
+      <div>
+        <span className="discount">{serviceDeal}</span>
+      </div>
+    </section>
+  );
+}
+
+
+function Deal(){
+  return(
+    <section className="deal-card">
+      <DealDetail title="GRAND OPENING SPECIAL !" serviceDeal="20% OFF ALL SERVICE"/>
+    </section>
+  );
+}
+
 
 function ServiceCard({ title, desc, icon }) {
   return (
@@ -263,6 +288,7 @@ export default function App() {
     <div>
       <Header />
       <Hero />
+      <Deal />
       <Services />
       <Pricing />
       <Hours />
