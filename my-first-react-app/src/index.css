@@ -339,7 +339,7 @@ a, a:visited, .nav a, .nav a:visited { color: #1f2a37; }
     radial-gradient(600px 300px at 0% 100%, rgba(99,230,190,0.12), transparent 60%);
   padding: 2em;
   border-radius: 12px;
-  border: 2px dashed #ec407a; /* soft accent border */
+  border: 2px dashed #ec407a; 
   text-align: center;
   box-shadow: 0 0 10px rgba(236, 64, 122, 0.15);
   margin: 2em auto;
@@ -350,7 +350,7 @@ a, a:visited, .nav a, .nav a:visited { color: #1f2a37; }
   font-size: 1.8rem;
   margin-bottom: 0.5em;
   font-family: 'Georgia', serif;
-  color: #d81b60; /* bold accent pink */
+  color: #d81b60; 
   text-transform: uppercase;
   letter-spacing: 1.5px;
   text-shadow: 1px 1px 2px rgba(216, 27, 96, 0.2);
@@ -359,13 +359,13 @@ a, a:visited, .nav a, .nav a:visited { color: #1f2a37; }
 .deal-card div {
   font-size: 1.4rem;
   font-weight: bold;
-  color: #4a148c; /* deep purple for contrast */
+  color: #4a148c; 
 }
 
 
 
 .deal-card div span.discount {
-  color: #d81b60; /* highlight discount */
+  color: #d81b60; 
   font-size: 1.6rem;
   background: linear-gradient(90deg, #f8bbd0, #fce4ec);
   padding: 0.2em 0.5em;
@@ -373,6 +373,8 @@ a, a:visited, .nav a, .nav a:visited { color: #1f2a37; }
   text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
   animation: glow 2s infinite;
 }
+
+
 
 @keyframes glow {
   0%   { box-shadow: 0 0 5px rgba(216, 27, 96, 0.2); }
@@ -400,4 +402,15 @@ a, a:visited, .nav a, .nav a:visited { color: #1f2a37; }
   body::before {
     background-attachment: scroll !important;
   }
+}
+
+.deal-card .deal-deadline {
+  margin-top: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: #d81b60; 
+  display: inline-block;
+  padding: 0.35rem 0.6rem;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #f8bbd0, #fce4ec);
 }

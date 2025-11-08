@@ -60,13 +60,14 @@ function Hero() {
   );
 }
 
-function DealDetail({title, serviceDeal}) {
+function DealDetail({title, serviceDeal, deadLine}) {
   return (
     <section className="section">
       <h1 className="section-title">{title}</h1>
       <div>
         <span className="discount">{serviceDeal}</span>
       </div>
+      <p className="deal-deadline">{deadLine}</p>
     </section>
   );
 }
@@ -75,7 +76,8 @@ function DealDetail({title, serviceDeal}) {
 function Deal(){
   return(
     <section className="deal-card">
-      <DealDetail title="GRAND OPENING SPECIAL !" serviceDeal="20% OFF ALL SERVICES"/>
+      <DealDetail title="GRAND OPENING SPECIAL !" serviceDeal="20% OFF ALL SERVICES" 
+      deadLine = "Available until November 15, 2025."/>
     </section>
   );
 }
